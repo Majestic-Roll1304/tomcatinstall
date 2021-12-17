@@ -4,9 +4,9 @@ sudo apt-get install default-jdk
 sudo groupadd tomcat
 sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
 cd /tmp
-wget 'https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.55/bin/apache-tomcat-9.0.55.tar.gz'
+wget 'https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.56/bin/apache-tomcat-9.0.56.tar.gz'
 sudo mkdir /opt/tomcat
-sudo tar xzvf apache-tomcat-9.0.55.tar.gz -C /opt/tomcat --strip-components=1
+sudo tar xzvf apache-tomcat-9.0.56.tar.gz -C /opt/tomcat --strip-components=1
 #x=$(sudo update-java-alternatives -l)
 cd /opt/tomcat
 sudo chgrp -R tomcat /opt/tomcat
@@ -45,5 +45,7 @@ sudo mv tomcat.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start tomcat
 sudo systemctl status tomcat
+
+
 
 
